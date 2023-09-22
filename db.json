@@ -1,0 +1,671 @@
+
+    [
+        {
+            "id": 1,
+            "name": "John",
+            "surname": "Doe",
+            "photos": ["room1.jpg", "room2.jpg", "room3.jpg"],
+            "description": "Cozy single room with a view.",
+            "price": 1000,
+            "location": "Cape Town, South Africa",
+            "latitude": -33.9249,
+            "longitude": 18.4241,
+            "checkin_date": "2023-09-15",
+            "checkout_date": "2023-09-20",
+            "star_rating": 4,
+            "amenities": ["Free Wi-Fi", "TV", "Air Conditioning"],
+            "contact_details": {
+                "email": "john@example.com",
+                "phone": "+1 (123) 456-7890"
+            }
+        },
+    
+        {
+            "id": 2,
+            "name": "Jane",
+            "surname": "Smith",
+            "photos": ["room4.jpg", "room5.jpg", "room6.jpg"],
+            "description": "Spacious double room with a balcony.",
+            "price": 1500,
+            "location": "Johannesburg, South Africa",
+            "latitude": -26.2041,
+            "longitude": 28.0473,
+            "checkin_date": "2023-09-18",
+            "checkout_date": "2023-09-22",
+            "star_rating": 5,
+            "amenities": ["Free Parking", "Breakfast Included", "Gym"],
+            "contact_details": {
+                "email": "jane@example.com",
+                "phone": "+1 (234) 567-8901"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Michael",
+            "surname": "Johnson",
+            "photos": ["room7.jpg", "room8.jpg", "room9.jpg"],
+            "description": "Elegant suite with a private jacuzzi.",
+            "price": 2000,
+            "location": "Durban, South Africa",
+            "latitude": -29.8587,
+            "longitude": 31.0218,
+            "checkin_date": "2023-09-17",
+            "checkout_date": "2023-09-23",
+            "star_rating": 4,
+            "amenities": ["Spa", "Restaurant", "Ocean View"],
+            "contact_details": {
+                "email": "michael@example.com",
+                "phone": "+1 (345) 678-9012"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Sarah",
+            "surname": "Williams",
+            "photos": ["room10.jpg", "room11.jpg", "room12.jpg"],
+            "description": "Rustic cottage in a tranquil setting.",
+            "price": 1200,
+            "location": "Knysna, South Africa",
+            "latitude": -34.0351,
+            "longitude": 23.0465,
+            "checkin_date": "2023-09-19",
+            "checkout_date": "2023-09-25",
+            "star_rating": 3,
+            "amenities": ["Fireplace", "Garden", "BBQ"],
+            "contact_details": {
+                "email": "sarah@example.com",
+                "phone": "+1 (456) 789-0123"
+            }
+        },
+        {
+            "id": 5,
+            "name": "David",
+            "surname": "Brown",
+            "photos": ["room13.jpg", "room14.jpg", "room15.jpg"],
+            "description": "Charming loft with a city view.",
+            "price": 1800,
+            "location": "Pretoria, South Africa",
+            "latitude": -25.7461,
+            "longitude": 28.1881,
+            "checkin_date": "2023-09-20",
+            "checkout_date": "2023-09-26",
+            "star_rating": 4,
+            "amenities": ["Balcony", "Kitchenette", "Work Desk"],
+            "contact_details": {
+                "email": "david@example.com",
+                "phone": "+1 (567) 890-1234"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Emily",
+            "surname": "Davis",
+            "photos": ["room16.jpg", "room17.jpg", "room18.jpg"],
+            "description": "Modern studio near the beach.",
+            "price": 1600,
+            "location": "Camps Bay, South Africa",
+            "latitude": -33.9502,
+            "longitude": 18.3782,
+            "checkin_date": "2023-09-21",
+            "checkout_date": "2023-09-27",
+            "star_rating": 5,
+            "amenities": ["Swimming Pool", "Private Entrance", "Netflix"],
+            "contact_details": {
+                "email": "emily@example.com",
+                "phone": "+1 (678) 901-2345"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Daniel",
+            "surname": "Taylor",
+            "photos": ["room19.jpg", "room20.jpg", "room21.jpg"],
+            "description": "Quaint cottage in a historic town.",
+            "price": 1400,
+            "location": "Stellenbosch, South Africa",
+            "latitude": -33.9321,
+            "longitude": 18.8602,
+            "checkin_date": "2023-09-22",
+            "checkout_date": "2023-09-28",
+            "star_rating": 3,
+            "amenities": ["Wine Cellar", "Golf Course Access", "Free Breakfast"],
+            "contact_details": {
+                "email": "daniel@example.com",
+                "phone": "+1 (789) 012-3456"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Olivia",
+            "surname": "Miller",
+            "photos": ["room22.jpg", "room23.jpg", "room24.jpg"],
+            "description": "Sunny apartment with a rooftop terrace.",
+            "price": 1700,
+            "location": "Port Elizabeth, South Africa",
+            "latitude": -33.9600,
+            "longitude": 25.6022,
+            "checkin_date": "2023-09-23",
+            "checkout_date": "2023-09-29",
+            "star_rating": 4,
+            "amenities": ["Rooftop Bar", "Fitness Center", "Oceanfront"],
+            "contact_details": {
+                "email": "olivia@example.com",
+                "phone": "+1 (901) 234-5678"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Ethan",
+            "surname": "Clark",
+            "photos": ["room25.jpg", "room26.jpg", "room27.jpg"],
+            "description": "Cozy cabin in a forest retreat.",
+            "price": 1300,
+            "location": "Plettenberg Bay, South Africa",
+            "latitude": -34.0527,
+            "longitude": 23.3645,
+            "checkin_date": "2023-09-24",
+            "checkout_date": "2023-09-30",
+            "star_rating": 3,
+            "amenities": ["Fire Pit", "Hiking Trails", "Pet-Friendly"],
+            "contact_details": {
+                "email": "ethan@example.com",
+                "phone": "+1 (012) 345-6789"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Ava",
+            "surname": "Harris",
+            "photos": ["room28.jpg", "room29.jpg", "room30.jpg"],
+            "description": "Contemporary penthouse with skyline views.",
+            "price": 2200,
+            "location": "Sandton, South Africa",
+            "latitude": -26.1076,
+            "longitude": 28.0567,
+            "checkin_date": "2023-09-25",
+            "checkout_date": "2023-10-01",
+            "star_rating": 5,
+            "amenities": ["Jacuzzi", "Concierge Service", "Private Chef"],
+            "contact_details": {
+                "email": "ava@example.com",
+                "phone": "+1 (234) 567-8901"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Noah",
+            "surname": "Young",
+            "photos": ["room31.jpg", "room32.jpg", "room33.jpg"],
+            "description": "Historic townhouse in the heart of the city.",
+            "price": 1900,
+            "location": "Graaff-Reinet, South Africa",
+            "latitude": -32.2522,
+            "longitude": 24.5303,
+            "checkin_date": "2023-09-26",
+            "checkout_date": "2023-10-02",
+            "star_rating": 4,
+            "amenities": ["Antique Furnishings", "Library", "Courtyard"],
+            "contact_details": {
+                "email": "noah@example.com",
+                "phone": "+1 (345) 678-9012"
+            }
+        },
+        {
+            "id": 12,
+            "name": "Sophia",
+            "surname": "Green",
+            "photos": ["room34.jpg", "room35.jpg", "room36.jpg"],
+            "description": "Secluded beachfront villa with private pool.",
+            "price": 2500,
+            "location": "Umhlanga, South Africa",
+            "latitude": -29.7231,
+            "longitude": 31.0731,
+            "checkin_date": "2023-09-27",
+            "checkout_date": "2023-10-03",
+            "star_rating": 5,
+            "amenities": ["Infinity Pool", "Direct Beach Access", "Butler Service"],
+            "contact_details": {
+                "email": "sophia@example.com",
+                "phone": "+1 (456) 789-0123"
+            }
+        },
+        {
+            "id": 13,
+            "name": "Liam",
+            "surname": "Wright",
+            "photos": ["room37.jpg", "room38.jpg", "room39.jpg"],
+            "description": "Cozy chalet with mountain views.",
+            "price": 1400,
+            "location": "Drakensberg, South Africa",
+            "latitude": -28.7072,
+            "longitude": 29.8756,
+            "checkin_date": "2023-09-28",
+            "checkout_date": "2023-10-04",
+            "star_rating": 4,
+            "amenities": ["Skiing Access", "Fireplace", "Hot Tub"],
+            "contact_details": {
+                "email": "liam@example.com",
+                "phone": "+1 (567) 890-1234"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Mia",
+            "surname": "Martin",
+            "photos": ["room40.jpg", "room41.jpg", "room42.jpg"],
+            "description": "Rustic farmhouse with a vineyard.",
+            "price": 1800,
+            "location": "Franschhoek, South Africa",
+            "latitude": -33.9092,
+            "longitude": 19.1194,
+            "checkin_date": "2023-09-29",
+            "checkout_date": "2023-10-05",
+            "star_rating": 3,
+            "amenities": ["Wine Tasting", "Orchard", "Bicycle Rentals"],
+            "contact_details": {
+                "email": "mia@example.com",
+                "phone": "+1 (678) 901-2345"
+            }
+        },
+
+        {
+            "id": 15,
+            "name": "Logan",
+            "surname": "Jackson",
+            "photos": ["room43.jpg", "room44.jpg", "room45.jpg"],
+            "description": "Luxurious penthouse with private pool.",
+            "price": 2800,
+            "location": "Cape Town, South Africa",
+            "latitude": -33.9249,
+            "longitude": 18.4241,
+            "checkin_date": "2023-09-30",
+            "checkout_date": "2023-10-06",
+            "star_rating": 5,
+            "amenities": ["Private Pool", "Concierge Service", "Helipad"],
+            "contact_details": {
+                "email": "logan@example.com",
+                "phone": "+1 (789) 012-3456"
+            }
+        },
+            {
+                "id": 16,
+                "name": "Aiden",
+                "surname": "Brown",
+                "photos": ["room46.jpg", "room47.jpg", "room48.jpg"],
+                "description": "Secluded chalet with panoramic views.",
+                "price": 1600,
+                "location": "Hogsback, South Africa",
+                "latitude": -32.5956,
+                "longitude": 26.9423,
+                "checkin_date": "2023-10-01",
+                "checkout_date": "2023-10-07",
+                "star_rating": 4,
+                "amenities": ["Hiking Trails", "Fireplace", "Stargazing"],
+                "contact_details": {
+                    "email": "aiden@example.com",
+                    "phone": "+1 (901) 234-5678"
+                }
+            },
+            {
+                "id": 17,
+                "name": "Lucas",
+                "surname": "Taylor",
+                "photos": ["room49.jpg", "room50.jpg", "room51.jpg"],
+                "description": "Chic urban loft in the heart of the city.",
+                "price": 1900,
+                "location": "Johannesburg, South Africa",
+                "latitude": -26.2041,
+                "longitude": 28.0473,
+                "checkin_date": "2023-10-02",
+                "checkout_date": "2023-10-08",
+                "star_rating": 5,
+                "amenities": ["City View", "Gourmet Kitchen", "Art Gallery Access"],
+                "contact_details": {
+                    "email": "lucas@example.com",
+                    "phone": "+1 (012) 345-6789"
+                }
+            },
+            {
+                "id": 18,
+                "name": "Liam",
+                "surname": "Smith",
+                "photos": ["room52.jpg", "room53.jpg", "room54.jpg"],
+                "description": "Cozy cottage with a private garden.",
+                "price": 1500,
+                "location": "Stellenbosch, South Africa",
+                "latitude": -33.9321,
+                "longitude": 18.8602,
+                "checkin_date": "2023-10-03",
+                "checkout_date": "2023-10-09",
+                "star_rating": 4,
+                "amenities": ["Private Garden", "Wine Tasting", "Pool"],
+                "contact_details": {
+                    "email": "liam@example.com",
+                    "phone": "+1 (234) 567-8901"
+                }
+            },
+            {
+                "id": 19,
+                "name": "Olivia",
+                "surname": "Jones",
+                "photos": ["room55.jpg", "room56.jpg", "room57.jpg"],
+                "description": "Riverside cabin with a fishing dock.",
+                "price": 1700,
+                "location": "Dullstroom, South Africa",
+                "latitude": -25.4141,
+                "longitude": 30.1230,
+                "checkin_date": "2023-10-04",
+                "checkout_date": "2023-10-10",
+                "star_rating": 3,
+                "amenities": ["Fishing Dock", "Fire Pit", "Boat Rentals"],
+                "contact_details": {
+                    "email": "olivia@example.com",
+                    "phone": "+1 (345) 678-9012"
+                }
+            },
+            {
+                "id": 20,
+                "name": "Emma",
+                "surname": "Wright",
+                "photos": ["room58.jpg", "room59.jpg", "room60.jpg"],
+                "description": "Contemporary apartment with a view.",
+                "price": 1800,
+                "location": "Cape Town, South Africa",
+                "latitude": -33.9249,
+                "longitude": 18.4241,
+                "checkin_date": "2023-10-05",
+                "checkout_date": "2023-10-11",
+                "star_rating": 4,
+                "amenities": ["Ocean View", "Pool Access", "Fitness Center"],
+                "contact_details": {
+                    "email": "emma@example.com",
+                    "phone": "+1 (567) 890-1234"
+                }
+            },
+            {
+                "id": 21,
+                "name": "Liam",
+                "surname": "Lewis",
+                "photos": ["room61.jpg", "room62.jpg", "room63.jpg"],
+                "description": "Safari lodge in the heart of the bush.",
+                "price": 2200,
+                "location": "Kruger National Park, South Africa",
+                "latitude": -23.9884,
+                "longitude": 31.5547,
+                "checkin_date": "2023-10-06",
+                "checkout_date": "2023-10-12",
+                "star_rating": 5,
+                "amenities": ["Safari Excursions", "Wildlife Viewing", "Bush Dining"],
+                "contact_details": {
+                    "email": "liam@example.com",
+                    "phone": "+1 (901) 234-5678"
+                }
+            },
+            {
+                "id": 22,
+                "name": "Ava",
+                "surname": "Hill",
+                "photos": ["room64.jpg", "room65.jpg", "room66.jpg"],
+                "description": "Historic guesthouse with period furnishings.",
+                "price": 2000,
+                "location": "Graaff-Reinet, South Africa",
+                "latitude": -32.2522,
+                "longitude": 24.5303,
+                "checkin_date": "2023-10-07",
+                "checkout_date": "2023-10-13",
+                "star_rating": 4,
+                "amenities": ["Antique Decor", "Garden", "Library"],
+                "contact_details": {
+                    "email": "ava@example.com",
+                    "phone": "+1 (012) 345-6789"
+                }
+            },
+            {
+                "id": 23,
+                "name": "Mia",
+                "surname": "Turner",
+                "photos": ["room67.jpg", "room68.jpg", "room69.jpg"],
+                "description": "Sunny bungalow with private beach access.",
+                "price": 2400,
+                "location": "Jeffreys Bay, South Africa",
+                "latitude": -34.0470,
+                "longitude": 24.9217,
+                "checkin_date": "2023-10-08",
+                "checkout_date": "2023-10-14",
+                "star_rating": 5,
+                "amenities": ["Private Beach Access", "Surfing Gear", "BBQ Area"],
+                "contact_details": {
+                    "email": "mia@example.com",
+                    "phone": "+1 (234) 567-8901"
+                }
+            },
+            {
+                "id": 24,
+                "name": "Oliver",
+                "surname": "Adams",
+                "photos": ["room70.jpg", "room71.jpg", "room72.jpg"],
+                "description": "Mountain retreat with a hot tub.",
+                "price": 1900,
+                "location": "Drakensberg, South Africa",
+                "latitude": -28.7072,
+                "longitude": 29.8756,
+                "checkin_date": "2023-10-09",
+                "checkout_date": "2023-10-15",
+                "star_rating": 4,
+                "amenities": ["Hot Tub", "Hiking Trails", "Scenic Views"],
+                "contact_details": {
+                    "email": "oliver@example.com",
+                    "phone": "+1 (345) 678-9012"
+                }
+            },
+            {
+                "id": 25,
+                "name": "Emma",
+                "surname": "Scott",
+                "photos": ["room73.jpg", "room74.jpg", "room75.jpg"],
+                "description": "Riverside cottage with a private dock.",
+                "price": 1700,
+                "location": "Plettenberg Bay, South Africa",
+                "latitude": -34.0527,
+                "longitude": 23.3645,
+                "checkin_date": "2023-10-10",
+                "checkout_date": "2023-10-16",
+                "star_rating": 3,
+                "amenities": ["Private Dock", "Fire Pit", "Kayaks"],
+                "contact_details": {
+                    "email": "emma@example.com",
+                    "phone": "+1 (567) 890-1234"
+                }
+            },
+            {
+                "id": 26,
+                "name": "Sophia",
+                "surname": "Harrison",
+                "photos": ["room76.jpg", "room77.jpg", "room78.jpg"],
+                "description": "Elegant townhouse in a historic district.",
+                "price": 2100,
+                "location": "Stellenbosch, South Africa",
+                "latitude": -33.9321,
+                "longitude": 18.8602,
+                "checkin_date": "2023-10-11",
+                "checkout_date": "2023-10-17",
+                "star_rating": 4,
+                "amenities": ["Historic Charm", "Wine Cellar", "Courtyard"],
+                "contact_details": {
+                    "email": "sophia@example.com",
+                    "phone": "+1 (901) 234-5678"
+                }
+            },
+            {
+                "id": 27,
+                "name": "Harper",
+                "surname": "Lewis",
+                "photos": ["room79.jpg", "room80.jpg", "room81.jpg"],
+                "description": "Seaside villa with a private pool.",
+                "price": 2600,
+                "location": "Umhlanga, South Africa",
+                "latitude": -29.7231,
+                "longitude": 31.0731,
+                "checkin_date": "2023-10-12",
+                "checkout_date": "2023-10-18",
+                "star_rating": 5,
+                "amenities": ["Private Pool", "Beach Access", "Butler Service"],
+                "contact_details": {
+                    "email": "harper@example.com",
+                    "phone": "+1 (012) 345-6789"
+                }
+            },
+            {
+                "id": 28,
+                "name": "Evelyn",
+                "surname": "Young",
+                "photos": ["room82.jpg", "room83.jpg", "room84.jpg"],
+                "description": "Quaint cottage with a view of the vineyards.",
+                "price": 1800,
+                "location": "Franschhoek, South Africa",
+                "latitude": -33.9092,
+                "longitude": 19.1194,
+                "checkin_date": "2023-10-13",
+                "checkout_date": "2023-10-19",
+                "star_rating": 3,
+                "amenities": ["Vineyard Views", "Wine Tasting", "Garden"],
+                "contact_details": {
+                    "email": "evelyn@example.com",
+                    "phone": "+1 (234) 567-8901"
+                }
+            },
+            {
+                "id": 29,
+                "name": "Mia",
+                "surname": "Ward",
+                "photos": ["room85.jpg", "room86.jpg", "room87.jpg"],
+                "description": "Modern apartment in the city center.",
+                "price": 2000,
+                "location": "Pretoria, South Africa",
+                "latitude": -25.7461,
+                "longitude": 28.1881,
+                "checkin_date": "2023-10-14",
+                "checkout_date": "2023-10-20",
+                "star_rating": 4,
+                "amenities": ["City Views", "Gym", "Rooftop Terrace"],
+                "contact_details": {
+                    "email": "mia@example.com",
+                    "phone": "+1 (567) 890-1234"
+                }
+            },
+            {
+                "id": 30,
+                "name": "Noah",
+                "surname": "Fisher",
+                "photos": ["room88.jpg", "room89.jpg", "room90.jpg"],
+                "description": "Charming cabin in a secluded forest.",
+                "price": 1700,
+                "location": "Hogsback, South Africa",
+                "latitude": -32.5956,
+                "longitude": 26.9423,
+                "checkin_date": "2023-10-15",
+                "checkout_date": "2023-10-21",
+                "star_rating": 3,
+                "amenities": ["Secluded Location", "Fireplace", "Hiking Trails"],
+                "contact_details": {
+                    "email": "noah@example.com",
+                    "phone": "+1 (901) 234-5678"
+                }
+            },
+            {
+                "id": 31,
+                "name": "Liam",
+                "surname": "Foster",
+                "photos": ["room91.jpg", "room92.jpg", "room93.jpg"],
+                "description": "Rustic farmhouse with a sprawling garden.",
+                "price": 2200,
+                "location": "Paarl, South Africa",
+                "latitude": -33.7348,
+                "longitude": 18.9651,
+                "checkin_date": "2023-10-16",
+                "checkout_date": "2023-10-22",
+                "star_rating": 5,
+                "amenities": ["Gardens", "Wine Tasting", "Pool"],
+                "contact_details": {
+                    "email": "liam@example.com",
+                    "phone": "+1 (012) 345-6789"
+                }
+            },
+            {
+                "id": 32,
+                "name": "Sophia",
+                "surname": "Fleming",
+                "photos": ["room94.jpg", "room95.jpg", "room96.jpg"],
+                "description": "Chic apartment with a view of the skyline.",
+                "price": 1900,
+                "location": "Sandton, South Africa",
+                "latitude": -26.1076,
+                "longitude": 28.0567,
+                "checkin_date": "2023-10-17",
+                "checkout_date": "2023-10-23",
+                "star_rating": 4,
+                "amenities": ["City Views", "Pool Access", "Fitness Center"],
+                "contact_details": {
+                    "email": "sophia@example.com",
+                    "phone": "+1 (901) 234-5678"
+                }
+            },
+            {
+                "id": 33,
+                "name": "Harper",
+                "surname": "Harris",
+                "photos": ["room97.jpg", "room98.jpg", "room99.jpg"],
+                "description": "Seaside cottage with a private beach.",
+                "price": 2500,
+                "location": "Knysna, South Africa",
+                "latitude": -34.0351,
+                "longitude": 23.0465,
+                "checkin_date": "2023-10-18",
+                "checkout_date": "2023-10-24",
+                "star_rating": 5,
+                "amenities": ["Private Beach", "Fire Pit", "Boat Rentals"],
+                "contact_details": {
+                    "email": "harper@example.com",
+                    "phone": "+1 (345) 678-9012"
+                }
+            },
+            {
+                "id": 34,
+                "name": "Benjamin",
+                "surname": "Clark",
+                "photos": ["room100.jpg", "room101.jpg", "room102.jpg"],
+                "description": "Mountain cabin with a view of the valley.",
+                "price": 1600,
+                "location": "Ceres, South Africa",
+                "latitude": -33.3700,
+                "longitude": 19.3120,
+                "checkin_date": "2023-10-19",
+                "checkout_date": "2023-10-25",
+                "star_rating": 4,
+                "amenities": ["Mountain Views", "Fireplace", "Hiking Trails"],
+                "contact_details": {
+                    "email": "benjamin@example.com",
+                    "phone": "+1 (567) 890-1234"
+                }
+            },
+            {
+                "id": 35,
+                "name": "Emma",
+                "surname": "Lewis",
+                "photos": ["room103.jpg", "room104.jpg", "room105.jpg"],
+                "description": "Urban loft with industrial chic design.",
+                "price": 1800,
+                "location": "Johannesburg, South Africa",
+                "latitude": -26.2041,
+                "longitude": 28.0473,
+                "checkin_date": "2023-10-20",
+                "checkout_date": "2023-10-26",
+                "star_rating": 3,
+                "amenities": ["Industrial Decor", "Rooftop Terrace", "Art Gallery Access"],
+                "contact_details": {
+                    "email": "emma@example.com",
+                    "phone": "+1 (901) 234-5678"
+                }
+            }
+    ]
+    
