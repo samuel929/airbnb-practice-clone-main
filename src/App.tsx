@@ -1,14 +1,33 @@
 import './App.css';
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import Header from './components/Header/Header';
 import ShowMapButton from './components/ShowMapButton/ShowMapButton';
-import ReactMapboxGl,{Layer,Feature} from 'react-mapbox-gl';
+import ReactMapboxGl,{Layer,Feature, Marker} from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Cards from './components/Card/Card';
 import Grid from '@mui/material/Grid';
 import IconBanner from './components/IconBanner/IconBanner';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { ToastContainer } from 'react-toastify';
+import axios from 'axios';
+import { FaMapPin } from 'react-icons/fa';
+
+
 function App() {
- const [showMap,setShowMap]=useState<boolean>(false)
+ const [showMap,setShowMap]=useState<boolean>(false);
+ const [user,setUser]=useState(null);
+ const [pins,setPins]=useState([])
+
+ React.useEffect(() => {
+  const fetchRooms = async () => {
+    await axios.get("http://localhost:3000/rooms")
+      .then((res) => {
+        setPins(res.data)
+      });
+  }
+  fetchRooms();
+}, []);
+ 
 const Map = ReactMapboxGl({
   accessToken:
     'pk.eyJ1Ijoic2FtdWVsOTI5IiwiYSI6ImNsbWdmaGRxMzE5cTIzZG56bDdqeHkwNXYifQ.LzBtJ_LRp2WRt8bBnk_z9w'
@@ -19,11 +38,11 @@ const ShowHideMap=()=>{
 }
   return (
     <div className="App">
-       <Header/>
        <IconBanner/>
        {
          showMap ?(
           <Map
+          zoom={[6]}
           style="mapbox://styles/mapbox/streets-v9"
           center={[28.044379492577264,-26.208418213507905]}
           containerStyle={{
@@ -31,92 +50,30 @@ const ShowHideMap=()=>{
             width: '100vw'
           }}
         >
-          <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
-            <Feature coordinates={[770307.8000000007, 786904.5999999996]} />
-          </Layer>
+          {
+            pins.map((item:any)=>(
+              <Marker
+              coordinates={[item.longitude, item.latitude]}
+              anchor="bottom"
+              
+           >
+             <FaMapPin color='#ff385c' size={30}/>{/* You can customize the marker's content */}
+           </Marker>
+            ))
+          }
         </Map>
          ):
          (
-           <>
-            <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
-           <Grid item xs={3} md={3}>
+           <>   
          <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>  
-          </Grid>
-          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
-           <Grid item xs={3} md={3}>
-         <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>  
-          </Grid>
-          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
-           <Grid item xs={3} md={3}>
-         <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>  
-          </Grid>
-          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
-           <Grid item xs={3} md={3}>
-         <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>  
-          </Grid>
-          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
-           <Grid item xs={3} md={3}>
-         <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>
-        <Grid item xs={3} md={3}>
-        <Cards/>
-        </Grid>  
-          </Grid>
            </>
-         
-          
          )
        }
       
        <div className='center-map-button'>
        <ShowMapButton showMap={showMap} ShowHideMap={ShowHideMap}/>
        </div>
+       <ToastContainer />
     </div>
   );       
 

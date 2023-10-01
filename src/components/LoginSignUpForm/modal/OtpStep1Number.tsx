@@ -4,7 +4,8 @@ import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import AirBnbTextInput from '../../TextInput/AirBnbTextInput';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
-import OtpInput from 'react-otp-input';
+import { RecaptchaVerifier, getAuth, signInWithPhoneNumber } from "firebase/auth";
+import { error } from 'console';
 
 interface Props{
     validationSchema: yup.ObjectSchema<{
@@ -18,7 +19,15 @@ interface Props{
 }
 
 
-function OtpStep1Number({state, setState,validationSchema,setOpenOtpModal}:Props) {
+function OtpStep1Number({state, setState,setOpenOtpModal}:Props) {
+  const [confirmationResult, setConfirmationResult] = useState(null);
+  console.log(confirmationResult);
+
+  const validationSchema = yup.object({
+    number: yup.number().required(),
+  });
+
+
   return (
     <>
     <div style={{ display: "flex", width: "347px", justifyContent: "space-between" }}>
@@ -45,8 +54,17 @@ function OtpStep1Number({state, setState,validationSchema,setOpenOtpModal}:Props
         number: '',
       }}
       validationSchema={validationSchema}
-      onSubmit={(values, e) => {
-        setState(2)
+      onSubmit={async(values, e) => {
+        const auth=getAuth()
+        const appVerifier = new RecaptchaVerifier(auth,'recaptcha-container');
+        try {
+          const confirmation:any = await signInWithPhoneNumber(auth,values.number, appVerifier);
+          setConfirmationResult(confirmation);
+          setState(2)
+        } catch (error) {
+          console.error('Error sending code:', error);
+        }
+        
       }}
     >
      <Form>

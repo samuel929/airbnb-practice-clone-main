@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+.App {
+  text-align: center;
+}
+
 .header-flex-container{
   display: flex;
   justify-content: space-between;
@@ -21,7 +25,7 @@ code {
   position: fixed;
   z-index: 200;
   background-color: white;
-  width: 90%;
+  width: 105%;
   top:0;
 }
 
@@ -50,7 +54,7 @@ code {
   width:293px;
   box-shadow: 2px 11px 10px 2px rgba(221,221,221,0.79);
   position: relative;
-  left:110px
+
 }
 
 .nav-search-font-size{
@@ -260,4 +264,14 @@ z-index: 99;
    box-shadow: none !important;
   overflow: hidden;
   max-width: 345px;
+}
+
+.reserve-btn{
+  width:100%;
+  height:40px;
+  color:white;
+  background-color: #d1385c;
+  border: 1px solid #d1385c;
+  border-radius: 8px;
+  margin-top: 40px;
 }

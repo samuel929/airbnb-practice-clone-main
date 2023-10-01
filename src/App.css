@@ -2,3 +2,63 @@
   text-align: center;
 }
 
+.rmdp-wrapper {
+  background-color: #fff;
+  direction: ltr;
+  text-align: center;
+  width: max-content;
+  border-radius: 21px !important;
+}
+
+.rmdp-week-day {
+  color: #d1385c !important;
+  cursor: default;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.rmdp-arrow {
+  border: solid #d1385c !important;
+  border-width: 0 2px 2px 0 !important;
+  display: inline-block;
+  height: 3px;
+  margin-top: 5px;
+  padding: 2px;
+  width: 3px;
+}
+
+.rmdp-day.rmdp-today span {
+  background-color:  #d1385c !important;
+  color: #fff;
+}
+
+.rmdp-range {
+  background-color: #d1385c !important;
+  box-shadow: none !important;
+  color: #fff;
+}
+
+.rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+  background-color: #fe9c9a !important;
+  color: #fff;
+}
+
+.rmdp-header-values {
+  color:  #d1385c !important;
+  margin: auto !important;
+}
+
+.rmdp-arrow-container:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  font-family: "Roboto";
+  color: rgb(160, 160, 160);
+  font-size: 16px;
+}

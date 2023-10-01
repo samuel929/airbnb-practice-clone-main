@@ -6,6 +6,8 @@ import AirBnbTextInput from '../../components/TextInput/AirBnbTextInput'
 import { setUser } from '../../Slices/userSlice';
 import { useDispatch,useSelector } from 'react-redux';
 import ContinueCreateProfileModal from './modal/ContinueCreateProfileModal';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { toast } from 'react-toastify';
 interface Props {
   setShowOptions: (x: boolean) => void;
 }
@@ -45,8 +47,18 @@ function SignUpForm({ setShowOptions }: Props) {
       validationSchema={validationSchema}
       onSubmit={(values, e) => {
         // Handle form submission here
-        dispatch(setUser(values));
-        setOpenProfileCreateModal(true)
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, values.email, values.password)
+        .then((userCredential) => {
+          // Signed in 
+          dispatch(setUser(values));
+          setOpenProfileCreateModal(true)
+          toast.success("User created succesfully!")
+        })
+        .catch((error:any) => {
+          toast.error(error.message)
+        });
+      
       }}
     >
       
